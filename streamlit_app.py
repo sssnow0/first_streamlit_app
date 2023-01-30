@@ -1,5 +1,7 @@
 import streamlit
 import pandas
+
+streamlit.stop()
 import snowflake.connector
 
 streamlit.title('My Mom''s New healthy Diner')
@@ -44,3 +46,4 @@ streamlit.dataframe(my_data_rows)
 add_my_fruit = streamlit.text_input('What fruit would you like to add?','Jackfruit')
 streamlit.write('Thanks for adding ' + add_my_fruit)
 
+my_cur.execute("insert into fruit_load_list values from ('from streamlit')")
